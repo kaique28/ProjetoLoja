@@ -11,7 +11,7 @@ E uma variável para a conexão com o banco que será usada em outros
 arquivos e, portanto, será declarada com o modificador public
 */
 class Database{
-    //definindo uma conexão publica
+    //definindo uma conexão publica para ser chamado em outro arquivo
     public $conexao;
     public function getConnection(){
         try{
