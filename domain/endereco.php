@@ -55,10 +55,10 @@ class Endereco{
         $this->bairro = htmlspecialchars(strip_tags($this->bairro));
         $this->cep = htmlspecialchars(strip_tags($this->cep));
 
-        $stmt->bindParam(":t",$this->logradouro);
-        $stmt->bindParam(":e",$this->numero);
-        $stmt->bindParam(":e",$this->complemento);
-        $stmt->bindParam(":e",$this->bairro);
+        $stmt->bindParam(":l",$this->logradouro);
+        $stmt->bindParam(":n",$this->numero);
+        $stmt->bindParam(":c",$this->complemento);
+        $stmt->bindParam(":b",$this->bairro);
         $stmt->bindParam(":e",$this->cep);
         
 
@@ -71,14 +71,14 @@ class Endereco{
     }
 
     public function atualizar(){
-        $query = "update contato set logradouro=:l, numero=:n, complemento=:c, bairro=:b, cep=:e where id=:i";
+        $query = "update endereco set logradouro=:l, numero=:n, complemento=:c, bairro=:b, cep=:e where id=:i";
 
         $stmt = $this->conexao->prepare($query);
 
-        $stmt->bindParam(":t",$this->logradouro);
-        $stmt->bindParam(":e",$this->numero);
-        $stmt->bindParam(":e",$this->complemento);
-        $stmt->bindParam(":e",$this->bairro);
+        $stmt->bindParam(":l",$this->logradouro);
+        $stmt->bindParam(":n",$this->numero);
+        $stmt->bindParam(":c",$this->complemento);
+        $stmt->bindParam(":b",$this->bairro);
         $stmt->bindParam(":e",$this->cep);
         $stmt->bindParam(":i",$this->id);
 
