@@ -1,6 +1,6 @@
 <?php
 /* criando um espelho da tabela usuario que esta no banco dbloja */
-class produto{
+class Produto{
     public $id;
     public $nome;
     public $descricao;
@@ -39,7 +39,7 @@ class produto{
     Função para cadastrar os produtos no banco de dados
     */
     public function cadastro(){
-        $query = "insert into produto set nome=:n, descricao=:d, preco=:p, imagem1=:i1, imagem=:i2, imagem=:i3, imagem=:i4 ";
+        $query = "insert into produto set nome=:n, descricao=:d, preco=:p, imagem1=:i1, imagem2=:i2, imagem3=:i3, imagem4=:i4";
 
         $stmt = $this->conexao->prepare($query);
 
@@ -87,6 +87,7 @@ class produto{
         $stmt->bindParam(":i2",$this->imagem2);
         $stmt->bindParam(":i3",$this->imagem3);
         $stmt->bindParam(":i4",$this->imagem4);
+        $stmt->bindParam(":i",$this->id);
 
         if($stmt->execute()){
             return true;
