@@ -49,7 +49,7 @@ class Pedido{
         $this->id_cliente = htmlspecialchars(strip_tags($this->id_cliente));
 
 
-        $stmt->bindParam(":p",$this->id_cliente);
+        $stmt->bindParam(":c",$this->id_cliente);
      
 
         if($stmt->execute()){
@@ -65,7 +65,7 @@ class Pedido{
 
         $stmt = $this->conexao->prepare($query);
 
-        $stmt->bindParam(":p",$this->id_cliente);
+        $stmt->bindParam(":c",$this->id_cliente);
 
         $stmt->bindParam(":i",$this->id);
 
