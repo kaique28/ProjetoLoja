@@ -36,7 +36,7 @@ class Estoque{
     Função para cadastrar os estoques no banco de dados
     */
     public function cadastro(){
-        $query = "insert into estoque set id_produto=:p, quantidade=:q, alterado=:a";
+        $query = "insert into estoque set id_produto=:p, quantidade=:q";
 
         $stmt = $this->conexao->prepare($query);
 
@@ -49,12 +49,12 @@ class Estoque{
         */
         $this->id_produto = htmlspecialchars(strip_tags($this->id_produto));
         $this->quantidade = htmlspecialchars(strip_tags($this->quantidade));
-        $this->alterado = htmlspecialchars(strip_tags($this->alterado));
+        
         
 
         $stmt->bindParam(":p",$this->id_produto);
         $stmt->bindParam(":q",$this->quantidade);
-        $stmt->bindParam(":a",$this->alterado);
+        
      
 
         if($stmt->execute()){
@@ -66,13 +66,13 @@ class Estoque{
     }
 
     public function atualizar(){
-        $query = "update estoque set id_produto=:p, quantidade=:q, alterado=:a where id=:i";
+        $query = "update estoque set id_produto=:p, quantidade=:q where id=:i";
 
         $stmt = $this->conexao->prepare($query);
 
         $stmt->bindParam(":p",$this->id_produto);
         $stmt->bindParam(":q",$this->quantidade);
-        $stmt->bindParam(":a",$this->alterado);
+        
         $stmt->bindParam(":i",$this->id);
 
         if($stmt->execute()){
