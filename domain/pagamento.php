@@ -74,7 +74,7 @@ class Pagamento{
     }
 
     public function atualizar(){
-        $query = "update pagamento set id_pedido=:pe, valor=:v, formapagamento=:f, descricao=:d, numeroparcelas=:n, valorparcela where id=:i";
+        $query = "update pagamento set id_pedido=:pe, valor=:v, formapagamento=:f, descricao=:d, numeroparcelas=:n, valorparcela=:vp where id=:i";
 
         $stmt = $this->conexao->prepare($query);
 
