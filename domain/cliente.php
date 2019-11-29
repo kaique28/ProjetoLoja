@@ -37,7 +37,7 @@ class Cliente{
 
         public function pesquisar_id(){
         #Seleciona todos os campos da tabela contato
-        $query = "select * from cliente where id=:i";
+        $query = "select * from cliente where id=?";
 
         /*
         Foi criada a variável stmt(Statment -> Sentença) para guardar a preparação da consulta
