@@ -64,7 +64,7 @@ class Cliente{
         */
         $stmt = $this->conexao->prepare($query);
 
-        $stmt->bindParam(1,$stmt->nome);
+        $stmt->bindParam(1,$this->nome);
 
         #execução da consulta e guarda de dados na variável stmt        
         $stmt->execute();
