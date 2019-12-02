@@ -1,6 +1,6 @@
 # Loja
 
-O projeto Loja é um _estudo_ de como construir, consumir e
+O projeto Loja é um __estudo__ de como construir, consumir e
 aplicar uma API em [php](https://www.php.net/), com o uso de [IONIC](https://ionicframework.com/). Onde usamos o php para criar a API com o padrão de desenvolvimento em camadas seguindo o paradigma da programação orientada a objeto e gerando uma estrutura para consumo em JSON, ou seja, uma API
 REST.
 
@@ -14,7 +14,7 @@ IONIC.
 [![NPM Version][npm-image]][npm-url]
 [![MySql Version][mysql-image]][mysql-url]
 [![PHP Version][php-image]][php-url]
-[![IONIC Version][ionic-imagem]][ionic-url]
+[![IONIC Version][ionic-image]][ionic-url]
 ### Instalação do NodeJS
 Como um ambiente de execução JavaScript assíncrono orientado a eventos, o Node.js é projetado para desenvolvimento de aplicações escaláveis de rede. No exemplo a seguir, diversas conexões podem ser controladas ao mesmo tempo. Em cada conexão a função de callback é chamada. Mas, se não houver trabalho a ser realizado, o Node.js ficará inativo.
 
