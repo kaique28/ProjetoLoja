@@ -40,3 +40,5 @@ para este projeto.
 
 ![](db/img/diagramabanco.png)
 
+## Work Flow do APP
+![](img/workflow.png)
