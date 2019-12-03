@@ -32,7 +32,7 @@ export class AppComponent {
       icon: 'log-out'
     },
     {
-      title: 'Politica',
+      title: 'Política',
       url: '/politica',
       icon: 'hand'
     },
