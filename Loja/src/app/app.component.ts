@@ -30,7 +30,12 @@ export class AppComponent {
       title: 'Sair',
       url: '/sair',
       icon: 'log-out'
-    }
+    },
+    {
+      title: 'Politica',
+      url: '/politica',
+      icon: 'hand'
+    },
   ];
 
   constructor(
