@@ -25,16 +25,16 @@ export class AppComponent {
       title: 'Meus Pedidos',
       url: '/pedidos',
       icon: 'reorder'
+    }, 
+    {
+      title: 'Política',
+      url: '/politica',
+      icon: 'hand'
     },
     {
       title: 'Sair',
       url: '/sair',
       icon: 'log-out'
-    },
-    {
-      title: 'Política',
-      url: '/politica',
-      icon: 'hand'
     },
   ];
 
