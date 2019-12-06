@@ -52,7 +52,7 @@ para a uso dos comandos de CRUD
 */
 $produto = new Produto($db);
 
-
+$idproduto = $_GET["id"];
 $data = json_decode(file_get_contents("php://input"));
 
 
@@ -62,9 +62,10 @@ da consulta que está na função listar. Dentro da função listar() temos uma
 consulta no formato sql que seleciona todos os usuário("Select * from produto")
 
 */
-$produto->id = $data->id;
+// $produto->id = $data->id;
 
-$stmt = $produto->pesquisar_id();
+$stmt = $produto->pesquisar_id($idproduto);
+
 /*
 Se a consulta retornar uma quantidade de linhas maior que 0(Zero), então será
 contruido um array com os dados dos endereços.
