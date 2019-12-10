@@ -3,10 +3,12 @@ import { NavController, NavParams } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpRequest, HttpHeaders } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-detalheproduto',
   templateUrl: './detalheproduto.page.html',
   styleUrls: ['./detalheproduto.page.scss'],
+  
 })
 export class DetalheprodutoPage implements OnInit {
 
