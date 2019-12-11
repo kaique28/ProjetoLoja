@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/cadastrar']);
   }
 
-  public efetuarlogin(){
+  public efetuarLogin(){
     var headers = new HttpHeaders();
     headers.append("Accept","application/json");
     headers.append("Content-Type","application/json");
@@ -37,9 +37,17 @@ export class LoginPage implements OnInit {
 
     this.http.get(this.url,{headers:headers,params:dados}).subscribe(
       data=>{
-        console.log(data);
+        
+        if(!data==null){
+          this.router.navigate(['/home']);
+        }
+        else
+        {
+          alert("Usuário ou senha incorretos");
+        }
       },
       error=>{
+        alert("Usuário ou senha incorretos");
         console.log("Erro ao tentar logar "+error);
       }
     );

@@ -41,7 +41,11 @@ class Usuario{
         e a senha. O valor para ambos os campos foi passado como
         pamamêtro
         */
-        $query = "select * from usuario where nomeusuario=? and senha=?";
+        $query = "select u.id as 'idusuario',u.nomeusuario,u.foto,c.id as 'idcliente',c.nome, e.* from 
+        usuario u inner join cliente c on u.id=c.id_usuario 
+        inner join endereco e on c.id_endereco = e.id
+        where u.nomeusuario=? and u.senha=?;
+        ";
 
         /* 
         Abaixo há uma ligação com os paramêtros da consulta(bind-ligação |
