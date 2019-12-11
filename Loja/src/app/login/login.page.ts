@@ -13,6 +13,9 @@ export class LoginPage implements OnInit {
   public modelUs:Usuario;
 
   constructor(private router:Router, private http:HttpClient) {
+
+    this.modelUs = new Usuario();
+
     this.modelUs.usuario="";
     this.modelUs.senha="";
    }
