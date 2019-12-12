@@ -33,9 +33,7 @@ export class DetalheprodutoPage implements OnInit {
     headers.append("Content-Type","application/json");
     // const headersOpcoes = new HttpHeaders.arguments({headers:headers})
 
-    
-    
-    
+        
     this.http.get(this.url,{headers:headers,params: dados}).subscribe(
       data => {
         const prod = (data as any);
@@ -45,6 +43,13 @@ export class DetalheprodutoPage implements OnInit {
         console.log("Erro ao requisitar a API "+error);
       }
     )
+
+  }
+
+  public exibirDados(){
+
+    var dados:any = window.localStorage.getItem("dadosCliente");
+    console.log("Estamos na página detalhes -> "+dados);
 
   }
 
